@@ -5,18 +5,30 @@
   <title>Win</title>
   <link rel="stylesheet" type="text/css" href="win.css">
 </head>
-  <script>
-    var beastw = new Audio('sound/beastwin.mp3');
-    beastw.play();
-  </script>
-  
 
 <body>
   <h1>Winner!</h1>
-  <p>Youre good but try level 3!!!!!!</p>
-  <button onclick="location.href = '/level3.html';" id="myButton2" class="float-left submit-button" >Continue!</button>
-</body>
+  <p>You're good but try level 3!!!!!!</p>
+  <button onclick="location.href = '/level3.html';" id="myButton2" class="float-left submit-button">Continue!</button>
+
   <footer style="margin-top: 20px; font-size: 0.8em; color: #999;">&copy; 2024 CMG by Fethlex</footer>
 
+  <script>
+    var beastw = new Audio('sound/beastwin.mp3');
+    beastw.play();
+
+    // Function to handle keydown event
+    function handleKeyDown(event) {
+      // Check if the key pressed is Enter (key code 13)
+      if (event.keyCode === 13) {
+        // Trigger click event of the "Continue" button
+        document.getElementById('myButton2').click();
+      }
+    }
+
+    // Add event listener to the document body to listen for keydown event
+    document.body.addEventListener('keydown', handleKeyDown);
+  </script>
+</body>
 
 </html>

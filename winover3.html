@@ -16,6 +16,18 @@
   <script>
     var beastw = new Audio('sound/beastwin.mp3');
     beastw.play();
+
+    // Function to handle keydown event
+    function handleKeyDown(event) {
+      // Check if the key pressed is Enter (key code 13)
+      if (event.keyCode === 13) {
+        // Trigger click event of the "Try Again!" button
+        document.querySelector('button').click();
+      }
+    }
+
+    // Add event listener to the document body to listen for keydown event
+    document.body.addEventListener('keydown', handleKeyDown);
   </script>
 
   <footer style="margin-top: 20px; font-size: 0.8em; color: #999;">
