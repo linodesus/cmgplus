@@ -238,7 +238,7 @@ function Checkwin() {
     }
   }
 
-setInterval(moveAI, 100);
+setInterval(moveAI, 150);
 
 
 
