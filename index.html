@@ -34,13 +34,16 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
         }
 
         button:hover {
             background-color: #3385b5;
+        }
+
+        .report-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
         }
     </style>
 </head>
@@ -48,21 +51,20 @@
 <body>
     <h1>Welcome to CMG</h1>
     <p>Get ready for an exciting gaming experience!</p>
-    <button id="reportButton">Report Error</button>
+    <button onclick="startGame()">Start Game</button>
     <footer style="margin-top: 20px; font-size: 0.8em; color: #999;">
         &copy; 2024 CMG by <a href="/my-bio" style="text-decoration: none; color: inherit;">Fethlex</a>
     </footer>
-     <button onclick="startGame()">Start Game</button>
-     function startGame() {
-            // Add any logic or redirection you need to start the game
+    <button class="report-button" onclick="reportError()">Report Error</button>
+    <script>
+        function startGame() {
             alert("Let the CMG Game begin!");
             window.location.href = "/level1.html";
-          
         }
-    <script>
-        document.getElementById("reportButton").addEventListener("click", function() {
+
+        function reportError() {
             window.location.href = "/report.html";
-        });
+        }
     </script>
 </body>
 
